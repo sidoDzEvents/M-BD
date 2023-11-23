@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Happy Birthday Marwa</title>
+  <meta charset="utf-8" />
+  <meta name="language" content="en-us" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style type="text/css">
+    * {
+      background: #fff;
+    }
+
+    #loveHeart {
+      background: transparent;
+      background: url("smile.gif") no-repeat center;
+    }
+
+    #copyright {
+      font-family: "Montserrat", sans-serif;
+    }
+
+    #copyright a {
+      text-decoration: none;
+    }
+
+    #copyright a:hover {
+      text-decoration: none;
+      color: royalblue;
+    }
+
+    #hbd_song {
+      display: none;
+    }
+
+    #disc {
+      color: lightgray;
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+
+  <link href="css/style1.css" type="text/css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/birthday.js"></script>
+  <script type="text/javascript" src="js/hbd.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css" />
+</head>
+
+<body>
+
+  <div style="padding-top: 10px;" class="section">
+    <div class="columns">
+      <div class="column is-12">
+        <center>
+          <audio controls loop class="song">
+            <source src="lotfi 2010 nwasik.mp3" type="audio/mpeg">
+          </audio>
+        </center>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="columns">
+      <div id="code" class="column is-6 is-offset-2">
+        <br />
+        <br />
+        <br /><br /><br /> <br />
+        <br />
+        <br /><br /><br /> <br />
+        <br />
+        <br /><br /><br /> <br />
+        <br />
+        <br /><br /><br /> <br />
+        <br />
+        <br /><br /><br />
+        <span class="space" /><span class="comments">* Hey ! its the 23th day of November, its your
+          birthday.</span><br />
+        <span class="comments">/*
+          I want to wish you the happiest of birthdays! May this year be filled with joy, laughter, and all the things
+          that bring a smile to your face!
+          I know it's been a while since we last had a heart-to-heart conversation
+          and I want to take this opportunity to reach out and reconnect, especially on such a special
+          occasion*</span><br />
+        <span class="space" /><span class="comments">*Life has a funny way of throwing challenges our way, and I
+          regret
+          that external circumstances caused a temporary rift between us.
+
+          However, I believe that birthdays are the perfect time to set aside differences and focus on the positive
+          aspects that bring us together.
+
+          I want you to know that I hold you in high regard</span><br />
+        <span class="space" /><span class="comments">*/</span><br />
+        I want you to know that I hold you in high regard. </span><br />
+        <span class="comments">Not just because we share a familial connection </span><br />
+        but because you are genuinely one of the
+        <span>true ones in my life Your kindness, resilience, and the beautiful person you are have always left a
+          lasting
+        </span><span class="keyword">
+          impression on me.
+        </span><br />
+        Despite the ups and downs, I cherish the moments we've spent together and the person <span
+          class="keyword">you've become.</span> <span class="string">I wish you all the happiness, success, and love in
+          the world.
+          Here's to a year filled </span><br />
+        with positive <br />
+        moments <span class="string">and shared laughter.</span></br>
+        ..</br>
+        <span class="comments">// My best wishes will be with you simultaneously.</span><br />
+        <span class="keyword">Ntmnalk</span> mn galbi <br /></br>
+        <span class="comments">Forever and ever</span><br /></br>
+        <span class="comments">luckiness</span><br />
+        </br>
+        <span class="comments">happiness</span><br /></br>
+        <span class="comments">and everything you wish can be achieved inchaallah.</span><br />
+        </br>
+        <span class="comments">// The last thing I wanna say</span><br />
+        <span class="string">"Happy Birthday!"</span>
+      </div>
+      <div id="loveHeart" class="is-4 column">
+        <canvas id="garden" style="display:block"></canvas>
+      </div>
+    </div>
+    <br />
+    <hr />
+    <div class="columns">
+      <div class="column is-12" id="copyright">
+        <center>
+          <p>Made with love by Sido :) </a></p>
+        </center>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="startContainer">
+    <button id="startButton">Start</button>
+    <div id="errorMsg"></div>
+    <div id="code"></div>
+    <div id="copyright"></div>
+  </div>
+
+
+  <script type="text/javascript">
+    // Function to check browser support and execute the code
+    function startCode() {
+      // Hide the start container
+      document.getElementById("startContainer").style.display = "none";
+
+      document.querySelector(".song").play();
+
+      // document.querySelector(".content-container00").style.display = "block";
+
+      if (!document.createElement("canvas").getContext) {
+        var msg = document.getElementById("errorMsg");
+        msg.innerHTML = "Sorry, browser doesn't support this! Asta3mly chrome ";
+        document.getElementById("code").style.display = "none";
+        document.getElementById("copyright").style.position = "absolute";
+        document.getElementById("copyright").style.bottom = "10px";
+      } else {
+        adjustCodePosition();
+        $("#code").typewriter();
+      }
+    }
+
+    // Event listener for the "Start" button
+    document.getElementById("startButton").addEventListener("click", startCode);
+
+
+
+
+
+  </script>
+</body>
+
+</html>
